@@ -1,0 +1,21 @@
+version: '3.9'
+
+services:
+  bot:
+    build: ./bot
+    command: bash -c "python /app/supervisor.py"
+    volumes:
+      - ./bot:/app
+    networks:
+      - network-bridge
+
+  profanityfilter:
+    build: ./profanityfilter
+    ports:
+      - "6969:6969"
+    networks:
+      - network-bridge
+
+networks:
+  network-bridge:
+ 

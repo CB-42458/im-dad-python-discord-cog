@@ -1,0 +1,2 @@
+[imDad]
+paths = ["./bot/.env", "./bot/cogs/imDad/opt_outs.json"]
